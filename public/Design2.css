@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    text-align: right;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav li a {
+    display: block;
+    padding: 5px;
+    color: #333;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #333;
+    color: lightskyblue;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+td,
+th {
+    padding: 10px;
+    border: 1px solid lightskyblue;
+}
+
+@media screen and (max-width: 600px) {
+    nav li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.menu {
+    float: left;
+    width: 20%;
+}
+
+.menuitem {
+    padding: 8px;
+    margin-top: 7px;
+    border-bottom: 1px solid lightblue;
+}
+
+.main {
+    width: 60%;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.right {
+    background-color: lightblue;
+    float: left;
+    width: 20%;
+    padding: 10px 15px;
+    margin-top: 7px;
+}
+
+.body {
+    background-color: lightblue;
+}
