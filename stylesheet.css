@@ -1,0 +1,143 @@
+nav {
+    text-align: right;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav li a {
+    display: block;
+    padding: 5px;
+    color: #333;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+td,
+th {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+@media screen and (max-width: 600px) {
+    nav li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: lightblue;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+* {
+    box-sizing: border-box
+}
+
+.slideshow-container {
+    max-width: 250px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev,
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: white;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
