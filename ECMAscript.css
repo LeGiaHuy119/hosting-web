@@ -1,0 +1,115 @@
+nav {
+    text-align: right;
+    background-color: lightblue;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav li a {
+    display: block;
+    padding: 5px;
+    color: #333;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #333;
+    color: lightblue;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+td,
+th {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: white;
+    margin: 1px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 50px);
+    grid-gap: 5px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 24px;
+    line-height: 50px;
+}
+
+.green {
+    background-color: green;
+    color: white;
+}
+
+.input-box {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#message {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.guess {
+    width: 50px;
+}
+
+.disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.text-footer {
+    text-align: center;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+
+footer {
+    background-color: lightblue;
+    margin: 0px;
+}
