@@ -1,83 +1,76 @@
-* {
-    margin: 0;
-    padding: 0;
+.button {
+    border-radius: 4px;
+    background-color: lightskyblue;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+body {
+    background-color: lightblue;
 }
 
 nav {
-    text-align: right;
+    background-color: lightblue;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.text-footer {
+    text-align: center;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
+    color: black;
 }
 
-nav li {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-nav li a {
-    display: block;
-    padding: 5px;
-    color: #333;
-    text-decoration: none;
-}
-
-nav li a:hover {
-    background-color: #333;
-    color: lightskyblue;
-}
-
-table {
-    border-collapse: collapse;
-    margin: 10px 0;
-}
-
-td,
-th {
-    padding: 10px;
-    border: 1px solid lightskyblue;
-}
-
-@media screen and (max-width: 600px) {
-    nav li {
-        display: block;
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-}
-
-* {
-    box-sizing: border-box;
-}
-
-.menu {
+img {
     float: left;
-    width: 20%;
+    margin-right: 50px;
 }
 
-.menuitem {
-    padding: 8px;
-    margin-top: 7px;
-    border-bottom: 1px solid lightblue;
-}
-
-.main {
-    width: 60%;
-    padding: 0 20px;
+p {
     overflow: hidden;
 }
 
-.right {
-    background-color: lightblue;
-    float: left;
-    width: 20%;
-    padding: 10px 15px;
-    margin-top: 7px;
+h1 {
+    text-align: center;
 }
 
-.body {
+div {
+    background-color: white;
+}
+
+footer {
     background-color: lightblue;
 }
