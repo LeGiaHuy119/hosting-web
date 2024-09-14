@@ -28,18 +28,7 @@ function initializeGame() {
     }
 }
 
-function calculateAlphabeticalDistance(word1, word2) {
-    let totalDistance = 0;
-    for (let i = 0; i < word1.length; i++) {
-        let letter1 = word1.charCodeAt(i) - 97;
-        let letter2 = word2.charCodeAt(i) - 97;
-        totalDistance += Math.abs(letter1 - letter2);
-    }
-    return totalDistance;
-}
-
-function checkProximity(guess) {
-    const proximity = calculateAlphabeticalDistance(guess, correctWord);
+function checkProximity(guess)
 
     if (guess === correctWord) {
         messageBox.textContent = "Correct! You've guessed the word!";
@@ -47,9 +36,6 @@ function checkProximity(guess) {
         return true;
     } else if (proximity <= 10) {
         messageBox.style.backgroundColor = "red";
-        messageBox.textContent = "You have " + (maxGuesses - currentGuess - 1) + " guesses left. " + "Please guess again";
-    } else if (proximity > 30) {
-        messageBox.style.backgroundColor = "blue";
         messageBox.textContent = "You have " + (maxGuesses - currentGuess - 1) + " guesses left. " + "Please guess again";
     } else {
         messageBox.style.backgroundColor = "white";
