@@ -1,6 +1,7 @@
-const words = ["banana"];
+const words = ["banana", "abroad", "branch", "breath", "bridge", "casual", "cactus", "carbon", "carrer", "castle", "couple", "domain", "double", "driven", "driver"];
 let correctWord = "";
 let currentGuess = 0;
+const maxGuesses = 6;
 
 const grid = document.getElementById('grid');
 const messageBox = document.getElementById('message');
@@ -10,13 +11,13 @@ const resetBtn = document.getElementById('reset-btn');
 
 function initializeGame() {
     correctWord = words[Math.floor(Math.random() * words.length)];
-    console.log("Correct word: " + correctWord); // Debugging purpose
+    console.log("Correct word: " + correctWord);
     currentGuess = 0;
     guessInput.value = "";
     guessInput.disabled = false;
     guessBtn.disabled = false;
 
-    messageBox.textContent = "Make your guess!";
+    messageBox.textContent = "Make your guess! You have " + maxGuesses + " guesses left.";
     messageBox.style.backgroundColor = "white";
 
     grid.innerHTML = "";
@@ -46,13 +47,13 @@ function checkProximity(guess) {
         return true;
     } else if (proximity <= 10) {
         messageBox.style.backgroundColor = "red";
-        messageBox.textContent = "Hot guess!";
+        messageBox.textContent = "You have " + (maxGuesses - currentGuess - 1) + " guesses left. " + "Please guess again";
     } else if (proximity > 30) {
         messageBox.style.backgroundColor = "blue";
-        messageBox.textContent = "Cold guess!";
+        messageBox.textContent = "You have " + (maxGuesses - currentGuess - 1) + " guesses left. " + "Please guess again";
     } else {
         messageBox.style.backgroundColor = "white";
-        messageBox.textContent = "Keep trying!";
+        messageBox.textContent = "You have " + (maxGuesses - currentGuess - 1) + " guesses left. " + "Please guess again";
     }
     return false;
 }
@@ -65,7 +66,7 @@ guessBtn.addEventListener('click', () => {
         return;
     }
 
-    if (currentGuess < 6) {
+    if (currentGuess < maxGuesses) {
         if (checkGuess(guess)) {
             guessInput.disabled = true;
             guessBtn.disabled = true;
