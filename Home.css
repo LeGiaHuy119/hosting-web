@@ -59,3 +59,7 @@ body {
     color: #333;
     background-color: white;
 }
+
+iframe {
+    border: none;
+}
